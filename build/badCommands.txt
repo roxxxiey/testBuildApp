@@ -1,0 +1,32 @@
+device name __
+device ipaddr 172.23.256.109
+device ipmask 255.1.255.0
+device gateway 182.12.123.12
+device macaddr 11.11.11.11.11.11
+serial port 1 baudrate werw
+serial port 1 stopbit dsfs
+serial port 1 patiry dfs
+mbgw 1 protocol modbus udp
+mbgw 1 port asd
+mbgw 1 timeout sad
+mbgw 1 remote ipaddr 172.23.11.256
+mbgw 1 remote port sd
+vlan 987 port add dfd
+vlan 987 port delete sdf
+eth port 1 native vlan sdf
+eth port 1 stpcost fhdsjf
+eth port 1 name e01
+eth port 1 speed asd
+ntp disable
+ntp server ipaddr 172.23.11.109
+ntp server port asd
+ntp timezone asd
+rstp priority asd
+snmp v2c community read gfdg
+snmp v2c community write ewr
+snmp v3 auth admin ___
+snmp v3 priv admin __
+lldp hold-multiwriter fdsf
+lldp timer df
+util sftp-config ip 172.999.999.999
+util sftp-config port 12435678989

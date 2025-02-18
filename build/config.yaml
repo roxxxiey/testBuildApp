@@ -1,0 +1,25 @@
+device_ip: "10.100.207.40"                 # ip-адрес устройства (NAP)
+port: "22"                                 # номер порта для подключения SSH
+user_name: "admin"                         # имя пользователя
+user_password: "spbec"                     # пароль пользователя
+tftp_ip: "10.100.207.50"                   # ip-адрес TFTP, для скачки конфига с устройства
+
+port_snmp: 161                             # порт для поключения по SNMP
+community: "public"                        # community SNMPv2c
+auth_protocol: "SHA"                       # протокол аутентификации по SNMPv3
+auth_passphrase: "spbec34711"              # пароль для аутентификации по SNMPv3
+privacy_protocol: "AES"                    # протокол шифрования для SNMPv3
+privacy_passphrase: "spbec34711"           # пароль для шифрования по SNMPv3
+
+bad_commands_file: "badCommands.txt"       # путь к файлу с командами для проверки валидации
+good_commands_file: "goodCommands.txt"     # путь к файлу с командами для создания тестовой кофигурации
+config_path: "cfg.cfg"                     # имя конфига после util tftp <ip> put config
+start_config: "device.cfg"                 # имя конфига, который скачивается с устройства перед тестированием, и потом возвращается
+address_oid: "OID.txt"                     # путь к файлу с OID
+nap_crc.bin: "nap_crc.bin"                 # путь к файлу с прошивкой
+#syslog_server: "localhost:5140"            путь до syslog сервера для отправки логов
+key_file: "server_key"                     # путь к файлу с ключом  для установления соединения по ssh при подключениии в sftp серверу
+back_up: "/home/piha/test_backup"           # директория куда будет выгружен backup
+config_backup: "backup_tftp.cfg"           # путь к файлу backup созданному через tftp для проверки backup чрезе sftp
+sftp_port: "2222"                          # порт для SFTP сервера
+retries: 3                                 # количество повторов при неудаче в процессе тестирования
