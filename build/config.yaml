@@ -1,0 +1,37 @@
+device_ip: "10.100.207.32"                 # ip-адрес устройства (NAP)
+default_device_ip: "172.23.11.109"         # дефолтный ip-адрес устройства
+port: "22"                                 # номер порта для подключения SSH
+user_name: "admin"                         # имя пользователя
+user_password: "spbec"                     # пароль пользователя
+tftp_ip: "10.100.207.50"                   # ip-адрес TFTP, для тестирования на raspberry pi
+tftp_ip_table: "172.23.11.104"             # ip-адрес сервера TFTP, для тестирования на столе
+
+# Параметры для SNMP
+port_snmp: 161                             # порт для поключения по SNMP
+community: "public"                        # community SNMPv2c
+auth_protocol: "SHA"                       # протокол аутентификации по SNMPv3
+auth_passphrase: "spbec34711"              # пароль для аутентификации по SNMPv3
+privacy_protocol: "AES"                    # протокол шифрования для SNMPv3
+privacy_passphrase: "spbec34711"           # пароль для шифрования по SNMPv3
+
+# Параметры для подключения по rs
+comPort: "/dev/ttySC1"                     # название com порта
+baudrate: 38400                            #
+stopbit: 1                                 #
+parity: 0                                  #
+
+# Пути к значимым файлам
+bad_commands_file: "badCommands.txt"       # путь к файлу с командами для проверки валидации
+good_commands_file: "goodCommands.txt"     # путь к файлу с командами для создания тестовой кофигурации
+config_path: "Aleksei.cfg"                 # имя конфига после util tftp <ip> put config
+start_config: "device.cfg"                 # имя конфига, который скачивается с устройства перед тестированием, и потом возвращается
+def_config_test: "default.cfg"             # имя дефолтного конфига усройства для тестирования
+uart_db_settings: "uartdbset.json"         # файл с кастомными настройками параметра uartDb для проверки применения
+uart_conf: "uartDbConf.cfg"                # файл с измененными параметрами uartdb
+address_oid: "OID.txt"                     # путь к файлу с OID
+nap_crc.bin: "nap_crc.bin"                 # путь к файлу с прошивкой
+key_file: "server_key"                     # путь к файлу с ключом для установления соединения по ssh при подключениии в sftp серверу
+back_up: "/home/piha/test_backup"          # директория куда будет выгружен backup
+config_backup: "backup_tftp.cfg"           # путь к файлу backup созданному через tftp для проверки backup чрезе sftp
+sftp_port: "2222"                          # порт для SFTP сервера
+retries: 3                                 # количество повторов при неудаче в процессе тестирования
